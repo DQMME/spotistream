@@ -1,0 +1,113 @@
+.command {
+    background-color: var(--heavy-black);
+    border-radius: 10px;
+    width: 60%;
+    min-width: 300px;
+    margin: 0 auto;
+}
+
+.command-button {
+    width: 100%;
+    height: 100%;
+
+    border: none;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 10px 15px 10px 15px;
+
+    font-size: 15px;
+
+    background-color: var(--light-black);
+    color: #ffffff;
+}
+
+.command-button.active {
+    background-color: var(--primary-color);
+
+    border-radius: 10px 10px 0 0;
+}
+
+.command-button p {
+    float: left;
+    margin: 0 0 0 10px;
+}
+
+.command-button i {
+    float: right;
+
+    margin-top: 3px;
+    margin-right: 10px;
+
+    rotate: 180deg;
+}
+
+.active i {
+    rotate: 0deg;
+}
+
+.command-content {
+    background-color: var(--light-black);
+
+    border-radius: 0 0 10px 10px;
+
+    padding: 0 0 15px 0;
+
+    display: none;
+}
+
+.command-content p.title {
+    font-size: 20px;
+    font-weight: bold;
+
+    padding-top: 5px;
+    margin-bottom: 5px;
+    margin-top: 0;
+}
+
+.command-content p.explanation {
+    margin-top: 3px
+}
+
+.command-content input {
+    text-align: center;
+    font-size: 16px;
+
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+
+    background-color: var(--heavy-black);
+    color: white;
+}
+
+.command-content input:active, input:focus {
+    border-width: 1mm;
+    border-style: inherit;
+    border-color: white;
+}
+
+.command-content input.big-input {
+    text-align: center;
+    width: 80%;
+    height: 30px;
+}
+
+.command-content select {
+    width: 150px;
+    height: 25px;
+    text-align: center;
+
+    color: white;
+    background-color: var(--heavy-black);
+
+    border-radius: 5px;
+    outline: none;
+}
+
+.command-content select:active, select:focus {
+    outline: none;
+}
+
+.command-content select.big-select {
+    width: 300px;
+}

@@ -1,0 +1,131 @@
+body {
+    display: block;
+}
+
+#stream-info {
+    background-color: var(--heavy-black);
+
+    width: 350px;
+
+    border-radius: 10px;
+
+    margin: 0 auto 50px auto;
+}
+
+#stream-info #stream-preview {
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+#stream-info img {
+    width: 80%;
+
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+#stream-info #stream-title {
+    font-size: 25px;
+
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+#stream-info #stream-viewers {
+    margin-top: 5px;
+
+    padding-bottom: 5px;
+}
+
+#song-info {
+    background-color: var(--heavy-black);
+
+    width: 460px;
+
+    border-radius: 10px;
+
+    position: relative;
+    right: 0;
+
+    margin: 0 auto;
+}
+
+#song-info #song-artist {
+    font-size: 24px;
+
+    padding-top: 10px;
+    margin-bottom: 0;
+}
+
+#song-info #song-name {
+    font-size: 18px;
+
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+#song-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#song-controls img {
+    width: 90px;
+
+    border-radius: 35px;
+
+    padding: 20px 20px 15px 20px;
+    margin-right: 16px;
+}
+
+#song-controls button {
+    width: 64px;
+    height: 64px;
+
+    background-color: #00c553;
+
+    border-radius: 64px;
+    border: none;
+
+    margin-right: 16px;
+}
+
+#song-controls button:hover {
+    background-color: #009f41;
+}
+
+#song-controls button:disabled {
+    background-color: var(--light-black);
+}
+
+#song-controls button:active {
+    width: 60px;
+    height: 60px;
+
+    margin: 2px 18px 2px 2px;
+}
+
+#song-controls button:disabled:active {
+    width: 64px;
+    height: 64px;
+    margin: 0 16px 0 0;
+}
+
+#progress {
+    width: 350px;
+    padding-bottom: 15px;
+    margin: 0 auto;
+}
+
+#progress-bar {
+    background-image: linear-gradient(to right, var(--primary-color), #00daff);
+
+    /*width: 50%;
+     */
+    height: 5px;
+
+    border-radius: 5px;
+
+    transition-duration: 0.5s;
+}

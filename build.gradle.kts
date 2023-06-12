@@ -18,6 +18,11 @@ version = "1.0-SNAPSHOT"
 repositories {
     mavenCentral()
 }
+dependencies {
+    implementation("io.ktor:ktor-server-core-jvm:2.1.3")
+    implementation("io.ktor:ktor-server-sessions-jvm:2.1.3")
+    implementation("io.ktor:ktor-client-encoding:2.1.3")
+}
 
 kotlin {
     jvm {
@@ -54,8 +59,16 @@ kotlin {
                 implementation("io.ktor:ktor-server-core-jvm:$ktorVersion")
                 implementation("io.ktor:ktor-server-netty:$ktorVersion")
                 implementation("io.ktor:ktor-server-forwarded-header:$ktorVersion")
+                implementation("io.ktor:ktor-client-content-negotiation:$ktorVersion")
+                implementation("io.ktor:ktor-serialization-kotlinx-json:$ktorVersion")
+                implementation("io.ktor:ktor-client-cio:$ktorVersion")
                 implementation("ch.qos.logback:logback-classic:$logbackVersion")
                 implementation("org.litote.kmongo:kmongo-coroutine-serialization:$kmongoVersion")
+                implementation("com.github.twitch4j:twitch4j:1.12.0")
+                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-rx2:1.6.3")
+                implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.4.0")
+                implementation("com.github.akarnokd:rxjava2-interop:0.13.7")
+                implementation("se.michaelthelin.spotify:spotify-web-api-java:7.1.0")
             }
         }
 
@@ -73,19 +86,12 @@ kotlin {
 }
 
 application {
-    mainClass.set("ServerKt")
+    mainClass.set("LauncherKt")
 }
 
 // include JS artifacts in any JAR we generate
 tasks.getByName<Jar>("jvmJar") {
-    val taskName = if (project.hasProperty("isProduction")
-        || project.gradle.startParameter.taskNames.contains("installDist")
-    ) {
-        "jsBrowserProductionWebpack"
-    } else {
-        "jsBrowserDevelopmentWebpack"
-    }
-    val webpackTask = tasks.getByName<KotlinWebpack>(taskName)
+    val webpackTask = tasks.getByName<KotlinWebpack>("jsBrowserProductionWebpack")
     dependsOn(webpackTask) // make sure JS gets compiled first
     from(File(webpackTask.destinationDirectory, webpackTask.outputFileName)) // bring output file along into the JAR
 }

@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400&display=swap');
+
+:root {
+    --background-color: #2f2d2d;
+    --light-black: #3b3b3b;
+    --heavy-black: #282727;
+    --heavyer-black: #232222;
+    --primary-color: #62e6f8;
+}
+
+body {
+    background-color: var(--background-color);
+
+    color: white;
+
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.menu-button {
+    color: white;
+    background-color: var(--light-black);
+
+    padding: 10px 20px 10px 20px;
+
+    border-width: 0;
+    border-radius: 5px;
+
+    font-size: 25px;
+}
+
+.menu-button:hover {
+    background-color: var(--heavy-black);
+}
+
+.menu-button:active {
+    font-size: 24px;
+}
+
+.link-icon:before {
+    font-weight: 900;
+    content: "\f0c1  ";
+    font-family: "Font Awesome 6 Free", sans-serif;
+}
+
+.success-button {
+    border-width: 0;
+    border-radius: 5px;
+    padding: 10px 20px 10px 20px;
+    font-size: 25px;
+    color: #ffffff;
+    background-color: #00d95f;
+}
+
+.success-button:before {
+    content: "\f058  ";
+    font-family: "Font Awesome 6 Free", sans-serif;
+    font-weight: 700;
+}
+
+.success-button:hover {
+    background-color: #00c553;
+}
+
+.success-button:active {
+    font-size: 24px;
+}
+
+.success-button:disabled {
+    color: lightgray;
+    background-color: var(--light-black);
+}
+
+.success-button:active:disabled {
+    color: lightgray;
+    background-color: var(--light-black);
+
+    font-size: 25px;
+}
+
+.fail-button {
+    border-width: 0;
+    border-radius: 5px;
+    padding: 10px 20px 10px 20px;
+    font-size: 25px;
+    color: #ffffff;
+    background-color: #ff2929;
+}
+
+.fail-button:before {
+    content: "\f057  ";
+    font-family: "Font Awesome 6 Free", sans-serif;
+    font-weight: 700;
+}
+
+.fail-button:hover {
+    background-color: #fd1d1d;
+}
+
+.fail-button:active {
+    font-size: 24px;
+}
+
+.command-icon:before {
+    font-weight: 900;
+    content: "\f120  ";
+    font-family: "Font Awesome 6 Free", sans-serif;
+}
+
+.home-icon:before {
+    content: "\f015  ";
+    font-family: "Font Awesome 6 Free", sans-serif;
+    font-weight: 900;
+}
+
+.plus-icon:before {
+    content: "\f055  ";
+    font-family: "Font Awesome 6 Free", sans-serif;
+    font-weight: 900;
+}
+
+.reward-icon:before {
+    content: "\f559  ";
+    font-family: "Font Awesome 6 Free", sans-serif;
+    font-weight: 900;
+}
+
+.primary {
+    color: var(--primary-color)
+}
