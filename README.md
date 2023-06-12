@@ -1,11 +1,4 @@
-# Ktor Fullstack Template
-This is a Template for creating Full Stack Web Applications.
+# SpotiStream
+This is my Twitch Bot to control Spotify onstream.
 
-# Credits
-This Template is basically this https://github.com/kotlin-hands-on/jvm-js-fullstack edited to be a template :)
-
-# How to use it
-Create a Template with the button\
-Edit the group in build.gradle.kts\
-Edit the name of the project in the settings.gradle.kts (this will be the name of the js file so rename that too in the index.html)\
-That's it I guess
+If you want to try the bot out, you can request beta access at https://dqmme.de. Just log in with Discord by clicking the icon in the top right corner.
